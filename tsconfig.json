@@ -19,6 +19,6 @@
     "experimentalDecorators": true,
     "downlevelIteration": true // Enable support of for ... of loops with target: es5
   },
-  // "include": ["./src/**/*"], // disabled so that VSCODE includes types in __tests__ too. Fixed in tsconfig.build.ts
+  "include": ["./src/**/*"],
   "exclude": ["./src/**/__mocks__/*", "./dist/**"]
 }
