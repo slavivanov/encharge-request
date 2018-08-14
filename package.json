@@ -1,11 +1,17 @@
 {
   "name": "encharge-integration",
   "version": "1.0.0",
-  "description": "Encharge",
-  "repository": "https://github.com/slavivanov/encharge-request.git",
-  "homepage": "https://encharge.io/",
+  "description": "A zapier-inspired fetch modification.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slavivanov/encharge-request.git"
+  },
+  "homepage": "https://github.com/slavivanov/encharge-request.git",
   "author": "Slav Ivanov <slav@encharge.io>",
   "license": "BSD-3-Clause",
+  "keywords": [
+    "node-fetch"
+  ],
   "main": ".build/index.js",
   "types": "src/index.d.ts",
   "typings": "src/our.d.ts",
