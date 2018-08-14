@@ -7,7 +7,8 @@ export type HttpMethod =
   | "PATCH"
   | "DELETE"
   | "OPTIONS"
-  | "HEAD";
+  | "HEAD"
+  | string;
 
 import { Agent } from "http";
 
