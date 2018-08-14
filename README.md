@@ -3,6 +3,7 @@ This module implements a Zapier-inspired node-fetch modification.
 Usage:
 
 ```javascript
+const { request } = require('request');
 request("https://example.com", {
   method: "POST",
   // Set headers

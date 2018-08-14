@@ -6,11 +6,12 @@
   "homepage": "https://encharge.io/",
   "author": "Slav Ivanov <slav@encharge.io>",
   "license": "BSD-3-Clause",
-  "main": "index.js",
+  "main": ".build/index.js",
+  "types": "src/index.d.ts",
   "typings": "src/our.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register --compilers ts:ts-node/register tests/**/*.spec.ts ",
-    "build": "tsc -p tsconfig.build.json --diagnostics"
+    "build": "tsc -p tsconfig.json --diagnostics"
   },
   "engines": {
     "node": "8.10.3",
