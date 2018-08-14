@@ -1,4 +1,5 @@
 This module implements a Zapier-inspired node-fetch modification.
+
 Usage:
 
 ```javascript
