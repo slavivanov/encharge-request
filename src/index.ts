@@ -16,7 +16,7 @@ import { parseResponse } from "./parse_response";
 fetch.Promise = Promise;
 
 // A stripped down version of fetch.
-export const request = (
+const request = (
   _url: string | RequestOptions,
   _options?: RequestOptions
 ): Promise<HttpResponse> => {
@@ -33,3 +33,5 @@ export const request = (
     return parseResponse(res, options);
   });
 };
+
+export default request;
