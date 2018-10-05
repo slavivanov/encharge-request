@@ -4,7 +4,7 @@ import fetchGlobal from "cross-fetch";
 // As per Zapier - hacky "clone" for fetch so we don't pollute the global library
 const fetch = fetchGlobal.bind({});
 import Promise = require("bluebird");
-import { RequestOptions } from "./our";
+import { RequestOptions, HttpResponse } from "./our";
 import {
   handleURLAndOptions,
   setDefaultOptions,
@@ -19,7 +19,7 @@ fetch.Promise = Promise;
 export const request = (
   _url: string | RequestOptions,
   _options?: RequestOptions
-): Promise<Response & { options: RequestOptions }> => {
+): Promise<HttpResponse> => {
   // tslint:disable-next-line:prefer-const
   let { url, options } = handleURLAndOptions(_url, _options);
 
