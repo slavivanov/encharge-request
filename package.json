@@ -1,6 +1,6 @@
 {
   "name": "encharge-request",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A zapier-inspired fetch modification.",
   "repository": {
     "type": "git",
