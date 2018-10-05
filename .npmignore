@@ -1,3 +1,8 @@
+docs
+node_modules
+*.log
+.environment
+.env
 src
 tsconfig.json
 tslint.json
@@ -5,3 +10,4 @@ tslint.json
 tests
 .vscode
 src
+!src/*.d.ts
