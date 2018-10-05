@@ -1,6 +1,6 @@
 {
   "name": "encharge-request",
-  "version": "1.0.4",
+  "version": "1.0.2",
   "description": "A zapier-inspired fetch modification.",
   "repository": {
     "type": "git",
@@ -13,18 +13,17 @@
     "node-fetch"
   ],
   "main": ".build/index.js",
-  "types": "src/index.d.ts",
-  "typings": "src/our.d.ts",
+  "typings": ".build/index",
   "scripts": {
     "test": "mocha -r ts-node/register --compilers ts:ts-node/register tests/**/*.spec.ts ",
-    "build": "tsc -p tsconfig.json --diagnostics"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "engines": {
     "node": "8.10.3",
     "npm": ">=3.10.10"
   },
   "dependencies": {
-    "@types/qs": "^6.5.1",
     "bluebird": "^3.5.1",
     "idx": "^2.4.0",
     "lodash": "^4.17.10",
@@ -32,6 +31,7 @@
     "qs": "^6.5.2"
   },
   "devDependencies": {
+    "@types/qs": "^6.5.1",
     "@types/bluebird": "^3.5.23",
     "@types/chai": "^4.1.4",
     "@types/lodash": "^4.14.116",

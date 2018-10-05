@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "outDir": ".build",
-    "allowJs": true,
     "strict": true,
     "strictPropertyInitialization": true,
     // "checkJs": true, //TODO - enable this

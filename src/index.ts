@@ -1,5 +1,7 @@
 // This module implements a zapier-inspired fetch modification.
 
+/// <reference path="./our.d.ts" />
+
 import fetchGlobal, { Response } from "node-fetch";
 // As per Zapier - hacky "clone" for fetch so we don't pollute the global library
 const fetch = fetchGlobal.bind({});
@@ -16,7 +18,7 @@ import { parseResponse } from "./parse_response";
 fetch.Promise = Promise;
 
 // A stripped down version of fetch.
-const request = (
+export const request = (
   _url: string | RequestOptions,
   _options?: RequestOptions
 ): Promise<Response & { options: RequestOptions }> => {
@@ -33,4 +35,3 @@ const request = (
     return parseResponse(res, options);
   });
 };
-export default request;
