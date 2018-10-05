@@ -10,4 +10,3 @@ tslint.json
 tests
 .vscode
 src
-!src/*.d.ts

@@ -13,7 +13,7 @@
     "node-fetch"
   ],
   "main": ".build/index.js",
-  "typings": ".build/index",
+  "typings": ".build/index.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register --compilers ts:ts-node/register tests/**/*.spec.ts ",
     "build": "tsc",
