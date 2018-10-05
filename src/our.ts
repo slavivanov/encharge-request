@@ -31,7 +31,7 @@ export interface HttpResponse {
   status: number;
   headers: { [key: string]: string };
   content: string;
-  json?: object | any[];
+  json?: object | any;
   request: RequestOptions;
   getHeader(key: string): string | null;
   throwForStatus(): void;
