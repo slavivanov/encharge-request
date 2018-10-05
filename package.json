@@ -25,17 +25,17 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
+    "@types/bluebird": "^3.5.23",
     "cross-fetch": "^2.2.2",
     "idx": "^2.4.0",
     "lodash": "^4.17.10",
-    "qs": "^6.5.2"
+    "qs": "^6.5.2",
+    "@types/lodash": "^4.14.116",
+    "@types/qs": "^6.5.1"
   },
   "devDependencies": {
-    "@types/bluebird": "^3.5.23",
     "@types/chai": "^4.1.4",
-    "@types/lodash": "^4.14.116",
     "@types/mocha": "^5.2.5",
-    "@types/qs": "^6.5.1",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "eslint": "^4.18.2",
