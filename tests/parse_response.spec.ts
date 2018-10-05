@@ -1,7 +1,7 @@
 import { parseHeaders, parseResponse } from "../src/parse_response";
 
 import * as chai from "chai";
-import { Headers, Response } from "node-fetch";
+import { Headers, Response } from "cross-fetch";
 const { expect } = chai;
 
 describe("parseHeaders", () => {

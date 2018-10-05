@@ -1,4 +1,3 @@
-import { Response, Headers } from "node-fetch";
 import { RequestOptions, HttpResponse } from "./our";
 
 export const parseHeaders = (_headers: Headers) => {

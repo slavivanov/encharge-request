@@ -1,6 +1,6 @@
 // This module implements a zapier-inspired fetch modification.
 
-import fetchGlobal, { Response } from "node-fetch";
+import fetchGlobal from "cross-fetch";
 // As per Zapier - hacky "clone" for fetch so we don't pollute the global library
 const fetch = fetchGlobal.bind({});
 import Promise = require("bluebird");
