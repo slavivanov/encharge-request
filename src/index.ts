@@ -1,10 +1,11 @@
 // This module implements a zapier-inspired fetch modification.
 
-import fetchGlobal from "cross-fetch";
-// As per Zapier - hacky "clone" for fetch so we don't pollute the global library
-const fetch = fetchGlobal.bind({});
-import Promise = require("bluebird");
-import { RequestOptions, HttpResponse } from "./our";
+import fetch from "cross-fetch";
+// Clone fetch so we don't pollute the global library
+// import * as clone from 'clone';
+// const fetch = clone(fetchGlobal);
+// import Promise = require("bluebird");
+import { RequestOptions, HttpResponse, Overwrite } from "./our";
 import {
   handleURLAndOptions,
   setDefaultOptions,
@@ -13,7 +14,7 @@ import {
   setRequestBody
 } from "./request_options";
 import { parseResponse } from "./parse_response";
-fetch.Promise = Promise;
+// fetch.Promise = Promise;
 
 // A stripped down version of fetch.
 const request = (
@@ -28,7 +29,10 @@ const request = (
   options = setRequestBody(options);
   options = filterRequestOptions(options);
 
-  return fetch(url, options).then((res: Response) => {
+  return fetch(url, options as Overwrite<
+    RequestOptions,
+    { body: string | undefined }
+  >).then((res: Response) => {
     options!.url = url;
     return parseResponse(res, options);
   });

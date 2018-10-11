@@ -24,17 +24,19 @@
     "npm": ">=3.10.10"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
     "@types/bluebird": "^3.5.23",
+    "@types/lodash": "^4.14.116",
+    "@types/qs": "^6.5.1",
+    "bluebird": "^3.5.1",
+    "clone": "^2.1.2",
     "cross-fetch": "^2.2.2",
     "idx": "^2.4.0",
     "lodash": "^4.17.10",
-    "qs": "^6.5.2",
-    "@types/lodash": "^4.14.116",
-    "@types/qs": "^6.5.1"
+    "qs": "^6.5.2"
   },
   "devDependencies": {
     "@types/chai": "^4.1.4",
+    "@types/clone": "^0.1.30",
     "@types/mocha": "^5.2.5",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
