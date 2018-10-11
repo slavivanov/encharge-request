@@ -1,6 +1,6 @@
 // This module implements a zapier-inspired fetch modification.
 
-import { fetch } from "cross-fetch";
+import fetch = require("cross-fetch");
 // Clone fetch so we don't pollute the global library
 // import * as clone from 'clone';
 // const fetch = clone(fetchGlobal);
@@ -29,6 +29,7 @@ const request = (
   options = setRequestBody(options);
   options = filterRequestOptions(options);
 
+  /// @ts-ignore
   return fetch(url, options as Overwrite<
     RequestOptions,
     { body: string | undefined }
