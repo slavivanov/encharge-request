@@ -1,6 +1,6 @@
 // This module implements a zapier-inspired fetch modification.
 
-import fetch from "cross-fetch";
+import { fetch } from "cross-fetch";
 // Clone fetch so we don't pollute the global library
 // import * as clone from 'clone';
 // const fetch = clone(fetchGlobal);
