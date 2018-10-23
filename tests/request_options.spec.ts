@@ -102,7 +102,8 @@ describe("Set request body", () => {
     const options = setRequestBody({
       json: {
         key: "value"
-      }
+      },
+      body: {}
     });
     expect(options).to.deep.equal({
       body: `{"key":"value"}`,
@@ -117,7 +118,8 @@ describe("Set request body", () => {
       form: {
         test: "123",
         data: ["hm hm", "yes"]
-      }
+      },
+      body: {}
     });
     expect(options).to.deep.equal({
       body: `test=123&data%5B%5D=hm%20hm&data%5B%5D=yes`,

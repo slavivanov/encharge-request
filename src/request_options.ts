@@ -84,7 +84,7 @@ export const setRequestBody = (options: RequestOptions): RequestOptions => {
     return options;
   }
   // use body if available
-  if (body) {
+  if (body && !_.isEmpty(body)) {
     if (typeof body === "string") {
       // String body, return as is
       options.body = body;
