@@ -22,15 +22,7 @@ export const handleURLAndOptions = (
 };
 
 export const filterRequestOptions = (options: RequestOptions) => {
-  return _.pick(options, [
-    "method",
-    "headers",
-    "body",
-    "follow",
-    "compress",
-    "timeout",
-    "size"
-  ]) as RequestOptions;
+  return _.omit(options, ["url", "json", "form", "params"]) as RequestOptions;
 };
 
 export const setDefaultOptions = (

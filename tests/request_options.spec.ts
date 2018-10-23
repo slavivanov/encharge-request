@@ -8,6 +8,7 @@ import {
 } from "../src/request_options";
 
 import * as chai from "chai";
+import { RequestOptions } from "../src/our";
 // const nock = require("nock");
 // const chaiAsPromised = require("chai-as-promised");
 // chai.use(chaiAsPromised);
@@ -30,6 +31,22 @@ describe("handleURLAndOptions", () => {
     expect(url).to.equal("http://example.com");
     expect(options).to.deep.equal({ method: "POST" });
   });
+
+  it("should take native fetch options", () => {
+    const _url =  "http://example.com";
+    const _options: RequestOptions = {
+      method: "POST",
+      json: {},
+      credentials: "include"
+    }
+    let { options } = handleURLAndOptions(_url, _options);
+
+    options = setDefaultOptions(options);
+    options.headers = parseHeaders(options.headers);
+    options = setRequestBody(options);
+    options = filterRequestOptions(options);
+    expect(options.credentials).to.equal("include")
+  })
 });
 
 describe("filterRequestOptions", () => {
